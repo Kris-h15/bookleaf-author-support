@@ -26,7 +26,7 @@ function AdminTickets({ onBack, onViewTicket }) {
         });
 
         const response = await fetch(
-          `http://localhost:5000/api/tickets/admin/all?${params}`,
+          `${import.meta.env.VITE_API_URL}/api/tickets/admin/all?${params}`,
           { signal: controller.signal },
         );
 

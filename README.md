@@ -359,7 +359,7 @@ Create the frontend environment file required by your setup. Configure
 the API base URL to point to the local backend, for example:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000
+VITE_API_BASE_URL=${import.meta.env.VITE_API_URL}
 ```
 
 If the project uses Create React App or a different variable name, use

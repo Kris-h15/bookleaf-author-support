@@ -21,7 +21,7 @@ function AIDraft({ ticketId, onReplySent }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tickets/${ticketId}/ai-draft`,
+        `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/ai-draft`,
         {
           method: "POST",
         },
@@ -54,7 +54,7 @@ function AIDraft({ ticketId, onReplySent }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tickets/${ticketId}/reply`,
+        `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/reply`,
         {
           method: "POST",
           headers: {

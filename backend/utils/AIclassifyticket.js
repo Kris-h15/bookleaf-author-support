@@ -4,15 +4,18 @@ async function AIclassifyticket(subject, description) {
   const text = `${subject} ${description}`.toLowerCase();
 
   // AI-api call to decide category
-  const response = await fetch("http://localhost:5000/api/tickets/AI-cat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL}/api/tickets/AI-cat`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text: text,
+      }),
     },
-    body: JSON.stringify({
-      text: text,
-    }),
-  });
+  );
 
   let data = await response.json();
 

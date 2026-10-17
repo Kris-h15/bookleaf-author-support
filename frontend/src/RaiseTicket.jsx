@@ -28,18 +28,21 @@ function RaiseTicket({ user, onBack, onTicketCreated }) {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/tickets", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/tickets`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            authorId: user.id,
+            subject,
+            description,
+            selectedBook,
+          }),
         },
-        body: JSON.stringify({
-          authorId: user.id,
-          subject,
-          description,
-          selectedBook,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -71,7 +74,7 @@ function RaiseTicket({ user, onBack, onTicketCreated }) {
         setBooksLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/authors/books/${user.author_id}`,
+          `${import.meta.env.VITE_API_URL}/api/authors/books/${user.author_id}`,
         );
 
         const data = await response.json();

@@ -18,7 +18,7 @@ function TicketDetails({ ticketId, user, onBack }) {
 
   //       // We will add this single-ticket API in the backend next.
   //       const response = await fetch(
-  //         `http://localhost:5000/api/tickets/${ticketId}`,
+  //         `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}`,
   //       );
 
   //       const data = await response.json();
@@ -70,7 +70,7 @@ function TicketDetails({ ticketId, user, onBack }) {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/tickets/${ticketId}`,
+          `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}`,
         );
 
         const data = await response.json();
@@ -149,7 +149,7 @@ function TicketDetails({ ticketId, user, onBack }) {
   //     setError("");
 
   //     const response = await fetch(
-  //       `http://localhost:5000/api/tickets/${ticketId}/replies`,
+  //       `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/replies`,
   //       {
   //         method: "POST",
   //         headers: {
@@ -190,7 +190,7 @@ function TicketDetails({ ticketId, user, onBack }) {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/tickets/${ticketId}/replies`,
+        `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/replies`,
         {
           method: "POST",
           headers: {

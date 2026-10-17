@@ -24,22 +24,25 @@ function Login({ onLogin }) {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email.trim(),
+            role,
+            password: password.trim(),
+          }),
         },
-        body: JSON.stringify({
-          email: email.trim(),
-          role,
-          password: password.trim(),
-        }),
-      });
+      );
 
       const data = await response.json();
       // saving the token as token in localstorage
       localStorage.setItem("token", data.token);
-      console.log(data);
+      // console.log(data);
 
       if (!response.ok) {
         throw new Error(data.message || "Login failed");
@@ -116,11 +119,21 @@ function Login({ onLogin }) {
 
         {role == "admin" ? (
           <span>
-            <small>Admin Email : admin@bookleaf.com</small>
+            <small id="creds">
+              Admin Email : admin@bookleaf.com <br />
+              Password : Admin@123{" "}
+            </small>
             {/* <button>Copy</button> */}
           </span>
         ) : (
-          <small>Trial version · BookLeaf Publishing</small>
+          <span className="notice">
+            {/* <small>Trial version · BookLeaf Publishing</small> */}
+            <small id="creds">
+              Password : FirstName (In small alphabet) <br /> Ex: Name : Sagar
+              Sharma <br />
+              password: sagar
+            </small>
+          </span>
         )}
       </form>
     </div>

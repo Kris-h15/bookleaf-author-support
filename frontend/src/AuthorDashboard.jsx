@@ -25,7 +25,7 @@ function AuthorDashboard({ user, onLogout }) {
     const fetchDashboard = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/authors/${user.id}/dashboard`,
+          `${import.meta.env.VITE_API_URL}/api/authors/${user.id}/dashboard`,
         );
 
         const data = await response.json();

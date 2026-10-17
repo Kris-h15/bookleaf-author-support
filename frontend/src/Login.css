@@ -147,3 +147,7 @@ body {
     font-size: 28px;
   }
 }
+
+#creds {
+  color: rgb(158, 19, 19);
+}

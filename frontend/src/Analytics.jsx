@@ -11,7 +11,7 @@ function Analytics() {
     const fetchAnalytics = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/tickets/admin/analytics",
+          `${import.meta.env.VITE_API_URL}/api/tickets/admin/analytics`,
         );
 
         const data = await response.json();

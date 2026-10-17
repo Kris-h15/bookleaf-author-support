@@ -14,13 +14,16 @@ function AdminDashboard({ user, onLogout }) {
     console.log(data);
 
     // Post Request
-    let response = await fetch("http://localhost:5000/api/authors/new", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    let response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/authors/new`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       },
-      body: JSON.stringify(data),
-    });
+    );
 
     console.log(await response.json());
   };
@@ -70,7 +73,9 @@ function AdminDashboard({ user, onLogout }) {
         <button onClick={() => setShowTickets(true)}>Open Ticket Queue</button>
 
         {/* Add New user button */}
-        <button id="add_authon_btn" onClick={() => setShowAddAuthor(true)}>+ Add Author</button>
+        <button id="add_authon_btn" onClick={() => setShowAddAuthor(true)}>
+          + Add Author
+        </button>
       </section>
       {/* Analytics */}
       <Analytics />

@@ -11,7 +11,7 @@ function ViewBook({ id, authorName = "NULL", onBack = () => {} }) {
     const getbooks = async () => {
       // fetch all books using author_id from Book Collection
       let response = await fetch(
-        `http://localhost:5000/api/authors/books/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/authors/books/${id}`,
       );
       let data = await response.json();
       setbooks(data.books);

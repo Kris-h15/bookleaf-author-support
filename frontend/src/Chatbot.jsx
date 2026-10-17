@@ -31,7 +31,7 @@ export default function Chatbot(id) {
     const text = message.toLowerCase();
     // AI API Call
     let response = await fetch(
-      `http://localhost:5000/api/authors/${id.id}/ai-bot`,
+      `${import.meta.env.VITE_API_URL}/api/authors/${id.id}/ai-bot`,
       {
         method: "POST",
         headers: {
