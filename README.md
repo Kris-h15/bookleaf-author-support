@@ -574,24 +574,6 @@ A typical deployment arrangement is:
 - **Backend:** Render
 - **Database:** MongoDB Atlas
 
-## Known Limitations and Future Improvements
-
-Confirm these against the final deployed code and update this section
-before submission.
-
-- **Category consistency:** The current Ticket schema's category enum
-  differs from the assignment's requested category labels. Standardize
-  category values across AI output, schema, API, and UI.
-- **AI priority scoring:** The schema contains `aiPriority`, but
-  ensure the priority is actually generated automatically and that
-  admins can override it.
-- **Knowledge-base grounding:** Ensure the response-drafting prompt
-  contains the assignment's BookLeaf policies and tone guidelines, and
-  test the sample query scenarios.
-- **Production hardening:** Add rate limiting, request size limits,
-  structured logging, monitoring, automated tests, and stronger
-  operational safeguards.
-
 ## Add-ons
 
 - AI Chatbot
