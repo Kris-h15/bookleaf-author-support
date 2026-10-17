@@ -165,7 +165,7 @@ function ViewBook({ id, authorName = "NULL", onBack = () => {} }) {
 
             <img
               id="author_img"
-              src={`./images/${selectedBook.title}.jpg`}
+              src={`/images/${selectedBook.title}.jpg`}
               alt={selectedBook.title}
             />
 
