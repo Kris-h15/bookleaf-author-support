@@ -1,0 +1,117 @@
+.admin-ticket-details {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #1f2937;
+}
+
+.admin-detail-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.admin-update-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: end;
+}
+
+.admin-update-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.admin-update-form select {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.admin-update-form button {
+  background: #075e54;
+  color: white;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-update-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-message {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 12px 0;
+}
+
+.admin-message span {
+  margin-left: 10px;
+  color: #075e54;
+  font-size: 13px;
+}
+
+.admin-message p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.admin-error {
+  color: #dc2626;
+}
+
+.admin-success {
+  color: #15803d;
+}
+
+@media (max-width: 600px) {
+  .admin-ticket-details {
+    padding: 20px 12px;
+  }
+
+  .admin-detail-card {
+    padding: 15px;
+  }
+}
+
+/* author_image */
+
+#author_image {
+  height: 180px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#author_image:hover {
+  transform: scale(3);
+  position: relative;
+  z-index: 1000;
+}
+
+#authorimg {
+  /* after image adding */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#ticket_descr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#book_image {
+  height: 230px;
+}

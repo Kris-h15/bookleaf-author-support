@@ -1,0 +1,127 @@
+.ai-draft {
+  margin-top: 24px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  font-family: Arial, sans-serif;
+}
+
+.ai-draft-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.ai-draft-header h3 {
+  margin: 0 0 6px;
+  color: #1f2937;
+  font-size: 20px;
+}
+
+.ai-draft-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.ai-generate-btn,
+.ai-send-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ai-generate-btn {
+  background: #6d28d9;
+}
+
+.ai-generate-btn:hover:not(:disabled) {
+  background: #5b21b6;
+}
+
+.ai-send-btn {
+  background: #2563eb;
+}
+
+.ai-send-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.ai-generate-btn:disabled,
+.ai-send-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ai-draft textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  resize: vertical;
+  outline: none;
+}
+
+.ai-draft textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.ai-draft-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.ai-draft-footer span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.ai-draft-error {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .ai-draft {
+    padding: 16px;
+  }
+
+  .ai-draft-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ai-generate-btn,
+  .ai-send-btn {
+    width: 100%;
+  }
+
+  .ai-draft-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+.ai-draft-success {
+  color: green;
+  margin-top: 8px;
+}

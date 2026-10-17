@@ -1,0 +1,94 @@
+.admin-tickets-page {
+  /* max-width: 1250px; */
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #1f2937;
+}
+
+.admin-tickets-page h1 {
+  margin: 20px 0 8px;
+}
+
+.ticket-filters {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.ticket-filters input,
+.ticket-filters select {
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+}
+
+.admin-back-button,
+.admin-ticket-table button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.admin-back-button {
+  background: #e5e7eb;
+}
+
+.admin-ticket-table button {
+  background: #075e54;
+  color: white;
+}
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.admin-ticket-table th,
+.admin-ticket-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.admin-ticket-table th {
+  background: #f3f4f6;
+}
+
+.admin-error {
+  color: #dc2626;
+}
+
+@media (max-width: 850px) {
+  .ticket-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .ticket-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* admin tickets css */
+.dp_admin_tickets {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}

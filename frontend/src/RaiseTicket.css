@@ -1,0 +1,140 @@
+.raise-ticket-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  background: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.raise-ticket-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 32px;
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(20, 40, 80, 0.06);
+}
+
+.back-button {
+  margin-bottom: 24px;
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  color: #2457a7;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.raise-ticket-card h1 {
+  margin: 0 0 10px;
+  color: #253047;
+  font-size: 27px;
+}
+
+.raise-ticket-card > p {
+  margin: 0 0 28px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.raise-ticket-card label {
+  display: block;
+  margin: 20px 0 8px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.raise-ticket-card input,
+.raise-ticket-card textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: white;
+  color: #253047;
+  font: inherit;
+  font-size: 14px;
+}
+
+.raise-ticket-card textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.raise-ticket-card input:focus,
+.raise-ticket-card textarea:focus {
+  outline: none;
+  border-color: #2457a7;
+  box-shadow: 0 0 0 3px rgba(36, 87, 167, 0.12);
+}
+
+.submit-ticket-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2457a7;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-ticket-button:hover {
+  background: #194681;
+}
+
+.submit-ticket-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ticket-error,
+.ticket-success {
+  margin: 15px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ticket-error {
+  color: #c62828;
+}
+
+.ticket-success {
+  color: #21804a;
+}
+
+@media (max-width: 480px) {
+  .raise-ticket-page {
+    padding: 18px 12px;
+  }
+
+  .raise-ticket-card {
+    padding: 22px 18px;
+  }
+
+  .raise-ticket-card h1 {
+    font-size: 23px;
+  }
+}
+
+.raise-ticket-card select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: white;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.raise-ticket-card select:focus {
+  outline: none;
+  border-color: #2563eb;
+}

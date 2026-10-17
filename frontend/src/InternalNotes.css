@@ -1,0 +1,147 @@
+.internal-notes {
+  margin-top: 25px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+.internal-notes h3 {
+  margin: 0 0 8px;
+  color: #1f2937;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.internal-notes .notes-subtitle {
+  margin: 0 0 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.internal-notes form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.internal-notes textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.internal-notes textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.internal-notes textarea::placeholder {
+  color: #9ca3af;
+}
+
+.internal-notes form button {
+  align-self: flex-end;
+  padding: 11px 20px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.internal-notes form button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.internal-notes form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.internal-notes .notes-error {
+  margin: 0 0 16px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.internal-notes .notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.internal-notes .note-card {
+  padding: 16px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+}
+
+.internal-notes .note-card p {
+  margin: 0 0 12px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.internal-notes .note-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #78716c;
+  font-size: 12px;
+}
+
+.internal-notes .empty-notes {
+  padding: 20px;
+  text-align: center;
+  color: #9ca3af;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .internal-notes {
+    padding: 16px;
+    margin-top: 18px;
+  }
+
+  .internal-notes h3 {
+    font-size: 19px;
+  }
+
+  .internal-notes form button {
+    width: 100%;
+  }
+
+  .internal-notes .note-meta {
+    flex-direction: column;
+  }
+}
